@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:elasimonwedding.lovable.app)",
+      "WebFetch(domain:forms.gle)"
+    ]
+  }
+}

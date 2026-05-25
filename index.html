@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════════════════
+       SEO & Métadonnées
+       ═══════════════════════════════════════════════════════ -->
+  <title>Mariage Lola &amp; Vincent — 10·11·12 Octobre 2026, Château du Griffon, Provence</title>
+  <meta name="description"
+    content="Rejoignez-nous pour célébrer notre mariage les 10, 11 et 12 octobre 2026 au Château du Griffon, à Saint-Martin-de-Castillon en Provence. Toutes les informations et le formulaire de confirmation sont ici.">
+  <meta name="robots" content="noindex, nofollow"><!-- Privé : ne pas indexer -->
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Mariage Lola &amp; Vincent — Octobre 2026, Provence">
+  <meta property="og:description" content="10, 11 &amp; 12 octobre 2026 · Château du Griffon · Saint-Martin-de-Castillon, Provence">
+  <!-- TODO PHOTO: remplacer par une vraie photo du couple ou du château -->
+  <meta property="og:image"       content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale"      content="fr_FR">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- ═══════════════════════════════════════════════════════
+       Google Fonts — Cormorant Garamond
+       ═══════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap"
+        rel="stylesheet">
+
+  <!-- Feuille de style principale -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- ╔═══════════════════════════════════════════════════════╗
+       ║  NAVIGATION FIXE                                      ║
+       ╚═══════════════════════════════════════════════════════╝ -->
+  <header class="nav nav--transparent" role="banner">
+    <div class="nav__conteneur">
+
+      <!-- Monogramme -->
+      <a href="#accueil" class="nav__logo" aria-label="Retour en haut — Lola &amp; Vincent">
+        L &amp; V
+      </a>
+
+      <!-- Liens desktop -->
+      <nav aria-label="Navigation principale">
+        <ul class="nav__liens">
+          <li><a href="#accueil"   class="nav__lien actif">Accueil</a></li>
+          <li><a href="#lieu"      class="nav__lien">Le lieu</a></li>
+          <li><a href="#programme" class="nav__lien">Programme</a></li>
+          <li><a href="#infos"     class="nav__lien">Infos pratiques</a></li>
+          <li><a href="#rsvp"      class="nav__lien">RSVP</a></li>
+        </ul>
+      </nav>
+
+      <!-- Burger mobile -->
+      <button class="nav__burger"
+              aria-label="Ouvrir le menu"
+              aria-expanded="false"
+              aria-controls="menu-mobile">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div><!-- /nav__conteneur -->
+  </header>
+
+  <!-- Menu mobile déroulant -->
+  <nav id="menu-mobile" class="nav__mobile" aria-label="Menu mobile">
+    <a href="#accueil"   class="nav__lien">Accueil</a>
+    <a href="#lieu"      class="nav__lien">Le lieu</a>
+    <a href="#programme" class="nav__lien">Programme</a>
+    <a href="#infos"     class="nav__lien">Infos pratiques</a>
+    <a href="#rsvp"      class="nav__lien">RSVP</a>
+  </nav>
+
+  <main>
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  1. HERO PLEIN ÉCRAN                                  ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="accueil" class="hero" aria-labelledby="hero-titre">
+
+      <!--
+        TODO PHOTO: Remplacer l'image de fond ci-dessous par votre photo personnelle.
+        → Placez votre fichier dans images/hero.jpg (format WebP recommandé, max 500 Ko)
+        → Modifiez background-image dans css/style.css, règle .hero__bg
+        Photo actuelle (placeholder) : Paysage alpin/Provence — Unsplash
+        Référence suggérée : https://unsplash.com/photos/wSRzQLBO1Zw
+      -->
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="hero__contenu">
+        <span class="hero__date">10 · 11 · 12 Octobre 2026</span>
+
+        <h1 id="hero-titre" class="hero__titre">
+          Lola
+          <span class="hero__esperluette">&amp;</span>
+          Vincent
+        </h1>
+
+        <p class="hero__lieu">Château du Griffon &nbsp;·&nbsp; Provence</p>
+
+        <div class="hero__cta-groupe">
+          <a href="#rsvp" class="btn btn-primaire">
+            Confirmer ma présence &nbsp;→
+          </a>
+          <a href="#programme" class="btn btn-contour-clair">
+            Voir le programme
+          </a>
+        </div>
+      </div><!-- /hero__contenu -->
+
+    </section><!-- /accueil -->
+
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  2. MOT D'ACCUEIL / NOTRE HISTOIRE                   ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="histoire" class="histoire section-py" aria-labelledby="histoire-titre">
+      <div class="conteneur">
+        <div class="histoire__grille">
+
+          <!-- Texte -->
+          <div class="histoire__texte">
+            <span class="label slide-droite">Notre histoire</span>
+
+            <h2 id="histoire-titre" class="slide-droite delai-1">
+              Nous sommes si heureux<br>de vous réunir
+            </h2>
+
+            <div class="separateur fade-in delai-2" aria-hidden="true">
+              <span>✦</span>
+            </div>
+
+            <!--
+              TODO TEXTE: Remplacez les paragraphes ci-dessous par votre mot d'accueil.
+              Partagez comment vous vous êtes rencontrés, ce que représente ce week-end
+              pour vous, et ce que vous souhaitez vivre avec vos proches.
+            -->
+            <p class="fade-in delai-2">
+              [Votre mot d'accueil ici. Quelques lignes pour raconter votre histoire,
+              l'endroit qui vous a réunis, ou simplement ce que ce week-end représente
+              pour vous deux.]
+            </p>
+            <p class="fade-in delai-3">
+              [Un deuxième paragraphe si vous le souhaitez — pour remercier vos proches
+              de faire le déplacement et partager votre joie à l'idée de les retrouver
+              dans ce cadre exceptionnel.]
+            </p>
+
+            <p class="fade-in delai-4" style="margin-top: 1.5rem; font-style: italic;">
+              Avec tout notre amour, <br>
+              <strong style="color: var(--terracotta);">Lola &amp; Vincent</strong>
+            </p>
+          </div><!-- /histoire__texte -->
+
+          <!-- Image décorative -->
+          <div class="histoire__image-wrap slide-gauche delai-2">
+            <!--
+              TODO PHOTO: Remplacer par une photo de vous deux ou une photo décorative.
+              → Nom suggéré : images/couple.jpg
+            -->
+            <img
+              class="histoire__image"
+              src="https://picsum.photos/seed/provence-automne/800/1000"
+              alt="Photo décorative — à remplacer par une photo du couple"
+              loading="lazy"
+              width="800"
+              height="1000">
+            <div class="histoire__ornement" aria-hidden="true"></div>
+          </div><!-- /histoire__image-wrap -->
+
+        </div><!-- /histoire__grille -->
+      </div><!-- /conteneur -->
+    </section><!-- /histoire -->
+
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  3. LE LIEU                                           ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="lieu" class="lieu section-py" aria-labelledby="lieu-titre">
+      <div class="conteneur">
+
+        <!-- En-tête de section -->
+        <div class="lieu__titre-wrap fade-in">
+          <span class="label">Le lieu</span>
+          <div class="separateur" aria-hidden="true"><span>✦</span></div>
+          <h2 id="lieu-titre">Château du Griffon</h2>
+          <p>
+            Niché dans les collines de la Provence orientale, le Château du Griffon
+            est un domaine d'exception entouré de forêts de chênes et de champs de
+            lavande. En octobre, les couleurs de l'automne offrent un cadre
+            naturellement doré, idéal pour célébrer une union.
+          </p>
+        </div>
+
+        <div class="lieu__grille">
+
+          <!-- Informations pratiques du lieu -->
+          <div class="lieu__infos fade-in delai-1">
+
+            <address class="lieu__adresse">
+              <span class="label" style="display:block; margin-bottom:0.5rem;">Adresse</span>
+              <p>
+                RD 900<br>
+                84750 Saint-Martin-de-Castillon<br>
+                Provence, France
+              </p>
+              <p style="margin-top:0.6rem;">
+                <a href="https://share.google/guyaMGylpCrJqJCoa"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                  Voir sur Google Maps →
+                </a>
+              </p>
+            </address>
+
+            <div class="lieu__boutons">
+              <a href="https://www.chateaudugriffon.com"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-contour">
+                Visiter le site →
+              </a>
+              <a href="https://share.google/guyaMGylpCrJqJCoa"
+                 target="_blank"
+                 rel="noopener noreferrer"
+                 class="btn btn-primaire">
+                Voir l'itinéraire →
+              </a>
+            </div>
+
+            <div style="margin-top: 0.5rem;">
+              <p style="font-size: 0.9rem;">
+                <strong style="color: var(--terracotta);">🅿️ Parking gratuit</strong>
+                — Stationnement facile et gratuit directement sur place.
+              </p>
+            </div>
+
+          </div><!-- /lieu__infos -->
+
+          <!-- Carte embarquée OpenStreetMap -->
+          <div class="lieu__carte fade-in delai-2">
+            <!--
+              Carte OpenStreetMap centrée sur Saint-Martin-de-Castillon (84750)
+              Coordonnées : 43.9017°N, 5.5077°E — Château du Griffon
+            -->
+            <iframe
+              title="Carte du Château du Griffon, Saint-Martin-de-Castillon"
+              src="https://www.openstreetmap.org/export/embed.html?bbox=5.4677%2C43.8817%2C5.5477%2C43.9217&amp;layer=mapnik&amp;marker=43.9017%2C5.5077"
+              width="600"
+              height="340"
+              loading="lazy"
+              style="border:none;"
+              referrerpolicy="no-referrer">
+            </iframe>
+          </div><!-- /lieu__carte -->
+
+        </div><!-- /lieu__grille -->
+
+      </div><!-- /conteneur -->
+    </section><!-- /lieu -->
+
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  4. PROGRAMME — TIMELINE 3 JOURS                     ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="programme" class="programme section-py" aria-labelledby="programme-titre">
+      <div class="conteneur">
+
+        <div class="programme__titre-wrap fade-in">
+          <span class="label">Le déroulé</span>
+          <div class="separateur" aria-hidden="true"><span>✦</span></div>
+          <h2 id="programme-titre">Programme du week-end</h2>
+        </div>
+
+        <div class="programme__jours">
+
+          <!-- ── SAMEDI 10 OCTOBRE ── -->
+          <article class="jour fade-in delai-1" aria-labelledby="jour-1-titre">
+            <div class="jour__entete">
+              <div class="jour__numero" aria-hidden="true">
+                <span>Oct.</span>
+                <strong>10</strong>
+              </div>
+              <div class="jour__info">
+                <h3 id="jour-1-titre">Samedi 10 octobre</h3>
+                <span class="label">Jour de la cérémonie</span>
+              </div>
+            </div>
+
+            <ol class="timeline" aria-label="Déroulé du samedi">
+              <li class="timeline__item">
+                <span class="timeline__heure">15h00</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🚗</span>
+                  <div>
+                    <p class="timeline__nom">Arrivée des invités</p>
+                    <p class="timeline__note">Accueil et installation</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">16h00</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">💍</span>
+                  <div>
+                    <p class="timeline__nom">Cérémonie</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">18h00</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🥂</span>
+                  <div>
+                    <p class="timeline__nom">Cocktail</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">20h00</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🍽️</span>
+                  <div>
+                    <p class="timeline__nom">Dîner</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">23h00</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🎶</span>
+                  <div>
+                    <p class="timeline__nom">Soirée</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </article><!-- /jour samedi -->
+
+          <!-- ── DIMANCHE 11 OCTOBRE ── -->
+          <article class="jour fade-in delai-2" aria-labelledby="jour-2-titre">
+            <div class="jour__entete">
+              <div class="jour__numero" aria-hidden="true">
+                <span>Oct.</span>
+                <strong>11</strong>
+              </div>
+              <div class="jour__info">
+                <h3 id="jour-2-titre">Dimanche 11 octobre</h3>
+                <span class="label">Détente &amp; retrouvailles</span>
+              </div>
+            </div>
+
+            <ol class="timeline" aria-label="Déroulé du dimanche">
+              <li class="timeline__item">
+                <span class="timeline__heure">11h30</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">☕</span>
+                  <div>
+                    <p class="timeline__nom">Brunch</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">Après-midi</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🌿</span>
+                  <div>
+                    <p class="timeline__nom">Quartier libre</p>
+                    <p class="timeline__note">Détente, piscine, balade</p>
+                  </div>
+                </div>
+              </li>
+              <li class="timeline__item">
+                <span class="timeline__heure">19h30</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">🍽️</span>
+                  <div>
+                    <p class="timeline__nom">Dîner</p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </article><!-- /jour dimanche -->
+
+          <!-- ── LUNDI 12 OCTOBRE ── -->
+          <article class="jour fade-in delai-3" aria-labelledby="jour-3-titre">
+            <div class="jour__entete">
+              <div class="jour__numero" aria-hidden="true">
+                <span>Oct.</span>
+                <strong>12</strong>
+              </div>
+              <div class="jour__info">
+                <h3 id="jour-3-titre">Lundi 12 octobre</h3>
+                <span class="label">Au revoir</span>
+              </div>
+            </div>
+
+            <ol class="timeline" aria-label="Déroulé du lundi">
+              <li class="timeline__item">
+                <span class="timeline__heure">Matin</span>
+                <div class="timeline__evenement">
+                  <span class="timeline__icone" aria-hidden="true">👋</span>
+                  <div>
+                    <p class="timeline__nom">Au revoir</p>
+                    <p class="timeline__note">
+                      Les départs se font à votre rythme. Merci d'avoir été là.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ol>
+          </article><!-- /jour lundi -->
+
+        </div><!-- /programme__jours -->
+      </div><!-- /conteneur -->
+    </section><!-- /programme -->
+
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  5. INFOS PRATIQUES                                   ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="infos" class="infos section-py" aria-labelledby="infos-titre">
+      <div class="conteneur">
+
+        <div class="infos__titre-wrap fade-in">
+          <span class="label">Tout ce qu'il faut savoir</span>
+          <div class="separateur" aria-hidden="true"><span>✦</span></div>
+          <h2 id="infos-titre">Infos pratiques</h2>
+        </div>
+
+        <div class="infos__grille">
+
+          <!-- Parking -->
+          <div class="info-carte fade-in delai-1">
+            <span class="info-carte__icone" aria-hidden="true">🅿️</span>
+            <h3 class="info-carte__titre">Parking</h3>
+            <p class="info-carte__texte">
+              Stationnement facile et <strong>gratuit</strong> directement
+              sur le domaine. Pas de souci pour garer votre véhicule, quelle
+              que soit l'heure.
+            </p>
+          </div>
+
+          <!-- Hébergement -->
+          <!--
+            TODO: Remplacez ce contenu par vos recommandations d'hébergement.
+            Exemples : hôtels, gîtes, chambres d'hôtes à proximité.
+          -->
+          <div class="info-carte info-carte--placeholder fade-in delai-2">
+            <span class="info-carte__icone" aria-hidden="true">🏨</span>
+            <h3 class="info-carte__titre">Hébergement</h3>
+            <p class="info-carte__texte">
+              Des recommandations d'hébergement à proximité seront bientôt
+              partagées. Restez connectés !
+            </p>
+          </div>
+
+          <!-- Covoiturage -->
+          <!--
+            TODO: Remplacez par un lien vers un outil de covoiturage
+            ou des instructions pour l'organisation des trajets.
+          -->
+          <div class="info-carte info-carte--placeholder fade-in delai-3">
+            <span class="info-carte__icone" aria-hidden="true">🚗</span>
+            <h3 class="info-carte__titre">Covoiturage</h3>
+            <p class="info-carte__texte">
+              Une organisation de covoiturage sera mise en place.
+              Les détails vous seront communiqués prochainement.
+            </p>
+          </div>
+
+          <!-- Dress code -->
+          <!--
+            TODO: Remplacez par votre dress code (ex. "Tenue élégante de rigueur",
+            "Smart casual", "Couleurs pastel bienvenues", etc.)
+          -->
+          <div class="info-carte info-carte--placeholder fade-in delai-1">
+            <span class="info-carte__icone" aria-hidden="true">👗</span>
+            <h3 class="info-carte__titre">Dress code</h3>
+            <p class="info-carte__texte">
+              À préciser — nous partagerons les consignes vestimentaires
+              prochainement.
+            </p>
+          </div>
+
+          <!-- Météo -->
+          <div class="info-carte fade-in delai-2">
+            <span class="info-carte__icone" aria-hidden="true">🌤️</span>
+            <h3 class="info-carte__titre">Météo</h3>
+            <p class="info-carte__texte">
+              La Provence en octobre est douce et ensoleillée le jour
+              (environ 18–20 °C), mais les soirées fraîchissent rapidement.
+              Prévoyez un manteau ou une veste pour la nuit.
+            </p>
+          </div>
+
+          <!-- À venir / Note -->
+          <div class="info-carte fade-in delai-3">
+            <span class="info-carte__icone" aria-hidden="true">✉️</span>
+            <h3 class="info-carte__titre">Une question ?</h3>
+            <p class="info-carte__texte">
+              N'hésitez pas à nous écrire directement pour toute question
+              pratique. Nous ferons de notre mieux pour vous répondre rapidement.
+            </p>
+          </div>
+
+        </div><!-- /infos__grille -->
+      </div><!-- /conteneur -->
+    </section><!-- /infos -->
+
+
+    <!-- ╔═══════════════════════════════════════════════════════╗
+         ║  6. RSVP — FORMULAIRE                                 ║
+         ╚═══════════════════════════════════════════════════════╝ -->
+    <section id="rsvp" class="rsvp section-py" aria-labelledby="rsvp-titre">
+      <div class="conteneur">
+
+        <div class="rsvp__titre-wrap fade-in">
+          <span class="label">Confirmez votre présence</span>
+          <div class="separateur" aria-hidden="true"><span>✦</span></div>
+          <h2 id="rsvp-titre">RSVP</h2>
+          <p>
+            Nous avons hâte de vous accueillir ! Merci de confirmer votre
+            présence en remplissant ce formulaire.
+          </p>
+          <!--
+            TODO: Indiquez la date limite de réponse, par exemple :
+            "avant le 15 septembre 2026"
+          -->
+          <span class="rsvp__date-limite">
+            Répondre avant le [date limite à compléter]
+          </span>
+        </div>
+
+        <div class="rsvp__formulaire-wrap fade-in delai-1">
+
+          <!--
+            Formulaire connecté à Google Forms.
+            Endpoint résolu depuis https://forms.gle/2HCAe8phxpbC6qot7
+            Les champs utilisent les identifiants entry.XXXX de Google Forms.
+            Soumission via fetch() en mode no-cors (pas de rechargement de page).
+          -->
+          <form
+            id="rsvp-form"
+            method="POST"
+            action="https://docs.google.com/forms/d/e/1FAIpQLSdcNHi-fA9iI38E9neM3p0N7-DEUK9kOyEIy_neg-UzYPBgwg/formResponse"
+            novalidate>
+
+            <!-- Nom et prénom -->
+            <div class="champ">
+              <label for="champ-nom">
+                Nom et prénom <span aria-hidden="true" style="color:var(--terracotta)">*</span>
+              </label>
+              <input
+                type="text"
+                id="champ-nom"
+                name="entry.1605506176"
+                placeholder="Marie Dupont"
+                required
+                autocomplete="name">
+            </div>
+
+            <!-- Présence — checkboxes -->
+            <div class="champ champ--presences">
+              <fieldset>
+                <legend>
+                  Je serai présent(e) les jours suivants
+                  <span aria-hidden="true" style="color:var(--terracotta)">*</span>
+                </legend>
+                <ul class="presences__liste">
+                  <li>
+                    <label class="presence-option">
+                      <input type="checkbox"
+                             name="entry.1405610770"
+                             value="Samedi 10 octobre">
+                      <span>Samedi 10 octobre — Cérémonie &amp; Soirée</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="presence-option">
+                      <input type="checkbox"
+                             name="entry.1405610770"
+                             value="Dimanche 11 octobre">
+                      <span>Dimanche 11 octobre — Brunch &amp; Dîner</span>
+                    </label>
+                  </li>
+                  <li>
+                    <label class="presence-option">
+                      <input type="checkbox"
+                             name="entry.1405610770"
+                             value="Lundi 12 octobre">
+                      <span>Lundi 12 octobre — Au revoir</span>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+
+            <!-- Régime alimentaire -->
+            <div class="champ">
+              <label for="champ-regime">
+                Régime alimentaire ou allergies
+              </label>
+              <input
+                type="text"
+                id="champ-regime"
+                name="entry.1104877686"
+                placeholder="Végétarien, sans gluten, allergie aux noix…">
+            </div>
+
+            <!-- Message -->
+            <div class="champ">
+              <label for="champ-message">
+                Un mot pour nous
+              </label>
+              <textarea
+                id="champ-message"
+                name="entry.1548994614"
+                rows="4"
+                placeholder="Un message, une chanson à inclure dans la playlist, une anecdote…"></textarea>
+            </div>
+
+            <!-- Envoi -->
+            <button type="submit" class="btn btn-primaire rsvp__bouton">
+              Confirmer ma présence &nbsp;✓
+            </button>
+
+          </form><!-- /rsvp-form -->
+
+          <!-- Message de succès (affiché après soumission) -->
+          <div id="rsvp-succes" class="rsvp__succes" role="alert" aria-live="polite">
+            <span class="rsvp__succes__icone" aria-hidden="true">💌</span>
+            <h3>Merci !</h3>
+            <p>
+              Votre réponse a bien été enregistrée.<br>
+              Nous avons hâte de vous retrouver en Provence.
+            </p>
+          </div>
+
+        </div><!-- /rsvp__formulaire-wrap -->
+      </div><!-- /conteneur -->
+    </section><!-- /rsvp -->
+
+  </main><!-- /main -->
+
+
+  <!-- ╔═══════════════════════════════════════════════════════╗
+       ║  PIED DE PAGE                                         ║
+       ╚═══════════════════════════════════════════════════════╝ -->
+  <footer class="footer" role="contentinfo">
+    <span class="footer__monogramme" aria-hidden="true">L &amp; V</span>
+    <p class="footer__texte">Avec amour, Lola &amp; Vincent</p>
+    <p class="footer__texte">10 · 11 · 12 octobre 2026</p>
+    <a href="https://www.chateaudugriffon.com"
+       target="_blank"
+       rel="noopener noreferrer"
+       class="footer__lien">
+      Château du Griffon, Provence
+    </a>
+  </footer>
+
+  <!-- JavaScript principal -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
