@@ -1170,3 +1170,27 @@ p {
   display: block;
   box-shadow: 0 4px 16px rgba(45, 41, 38, 0.12);
 }
+
+/* ────────────────────────────────────────────────────────────────
+   17. ANIMATION CHUTE — flocon au clic
+   ──────────────────────────────────────────────────────────────── */
+
+@keyframes chute {
+  0%   { opacity: 1; transform: translate(0, 0) rotate(0deg); }
+  70%  { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--derive, 40px), 320px) rotate(var(--rotation, 180deg)); }
+}
+
+.flocon {
+  position: fixed;
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  animation: chute 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .flocon { display: none; }
+}

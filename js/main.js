@@ -194,6 +194,43 @@
   }
 
   /* ──────────────────────────────────────────────────────────
+     8. ANIMATION CHUTE — flocon au clic
+     ────────────────────────────────────────────────────────── */
+
+  var SELECTEUR_INTERACTIF = [
+    'a', 'button', 'input', 'select', 'textarea', 'label',
+    '[role="button"]', '[role="link"]', '[role="menuitem"]', '[role="tab"]',
+    'summary', 'details', 'iframe', '.nav__lien',
+  ].join(', ');
+
+  function estInteractif(element) {
+    return !!element.closest(SELECTEUR_INTERACTIF);
+  }
+
+  function creerFlocon(x, y) {
+    var derive   = (Math.random() * 100 - 50).toFixed(1) + 'px';
+    var rotation = (Math.random() * 20 + 5).toFixed(0) + 'deg';
+
+    var img = document.createElement('img');
+    img.className = 'flocon';
+    img.src = "images/crepe.png";
+    img.alt = '';
+    img.setAttribute('aria-hidden', 'true');
+    img.style.left = (x - 33) + 'px';
+    img.style.top  = (y - 33) + 'px';
+    img.style.setProperty('--derive',   derive);
+    img.style.setProperty('--rotation', rotation);
+
+    document.body.appendChild(img);
+    img.addEventListener('animationend', function () { img.remove(); }, { once: true });
+  }
+
+  document.addEventListener('click', function (e) {
+    if (estInteractif(e.target)) return;
+    creerFlocon(e.clientX, e.clientY);
+  });
+
+  /* ──────────────────────────────────────────────────────────
      7. ACCESSIBILITÉ — piège de focus pour le menu mobile
      ────────────────────────────────────────────────────────── */
   document.addEventListener('keydown', function (e) {
