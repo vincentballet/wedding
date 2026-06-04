@@ -723,9 +723,11 @@ p {
 }
 
 .timeline__icone {
-  font-size: 1.05rem;
-  line-height: 1.5;
+  width: 1.15rem;
+  height: 1.15rem;
   flex-shrink: 0;
+  color: var(--ocre);
+  margin-top: 0.18em;
 }
 
 .timeline__nom {
@@ -764,6 +766,9 @@ p {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1.5rem;
+  max-width: 570px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Carte info */
@@ -781,9 +786,15 @@ p {
 }
 
 .info-carte__icone {
-  font-size: 2rem;
-  margin-bottom: 1rem;
   display: block;
+  margin-bottom: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--terracotta);
+}
+
+.info-carte--placeholder .info-carte__icone {
+  color: var(--sauge);
 }
 
 .info-carte__titre {
@@ -822,7 +833,7 @@ p {
 
 @media (min-width: 900px) {
   .infos__grille {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -993,9 +1004,12 @@ p {
 }
 
 .rsvp__succes__icone {
-  font-size: 3rem;
-  margin-bottom: 1.2rem;
   display: block;
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1.2rem;
+  margin-inline: auto;
+  color: var(--terracotta);
 }
 
 .rsvp__succes h3 {
@@ -1120,4 +1134,39 @@ p {
   opacity: 0.5;
   font-size: 0.9rem;
   letter-spacing: 0.3em;
+}
+
+/* ────────────────────────────────────────────────────────────
+   16. SOUVENIRS — PHOTOS DE JEUNESSE
+   ──────────────────────────────────────────────────────────── */
+.souvenirs {
+  background: var(--creme);
+}
+
+.souvenirs__titre-wrap {
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3.5rem);
+}
+
+.souvenirs__grille {
+  display: flex;
+  justify-content: center;
+  gap: clamp(0.6rem, 1.5vw, 1.2rem);
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.souvenir {
+  flex: 0 0 auto;
+  width: clamp(100px, 16vw, 180px);
+}
+
+.souvenir img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: var(--rayon);
+  display: block;
+  box-shadow: 0 4px 16px rgba(45, 41, 38, 0.12);
 }
