@@ -262,7 +262,7 @@ p {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--ocre);
+  background: rgba(245, 240, 232, 0.7);
   transition: width var(--transition);
 }
 .nav__lien:hover::after,
@@ -270,12 +270,16 @@ p {
   width: 100%;
 }
 
+.nav__lien.actif,
+.nav__lien:hover {
+  color: rgba(255, 255, 255, 1);
+}
+
 .nav--opaque .nav__lien {
   color: var(--texte-doux);
 }
-.nav__lien.actif,
-.nav__lien:hover {
-  color: var(--terracotta);
+.nav--opaque .nav__lien::after {
+  background: var(--terracotta);
 }
 .nav--opaque .nav__lien.actif,
 .nav--opaque .nav__lien:hover {
@@ -416,10 +420,23 @@ p {
 .hero__date {
   font-size: 0.85rem;
   font-variant: small-caps;
-  letter-spacing: 0.22em;
-  color: var(--ocre);
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.90);
   margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+}
+
+.hero__date::before,
+.hero__date::after {
+  content: '';
   display: block;
+  width: 3rem;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .hero__titre {
@@ -433,7 +450,7 @@ p {
 }
 
 .hero__esperluette {
-  color: var(--ocre);
+  color: rgba(255, 255, 255, 0.75);
   display: block;
   font-size: 0.6em;
   line-height: 1.8;
