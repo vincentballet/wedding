@@ -1094,6 +1094,8 @@ p {
 .delai-3 { transition-delay: 0.3s; }
 .delai-4 { transition-delay: 0.4s; }
 .delai-5 { transition-delay: 0.5s; }
+.delai-6 { transition-delay: 0.6s; }
+.delai-7 { transition-delay: 0.7s; }
 
 /* Classe ajoutée par IntersectionObserver */
 .visible {
@@ -1150,21 +1152,19 @@ p {
 
 .souvenirs__grille {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: clamp(0.6rem, 1.5vw, 1.2rem);
-  flex-wrap: nowrap;
-  overflow-x: auto;
 }
 
 .souvenir {
-  flex: 0 0 auto;
-  width: clamp(100px, 16vw, 180px);
+  flex: 0 0 calc(33.333% - clamp(0.4rem, 1vw, 0.8rem));
 }
 
 .souvenir img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: var(--rayon);
   display: block;
