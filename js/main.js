@@ -225,7 +225,6 @@
     img.addEventListener('animationend', function () { img.remove(); }, { once: true });
 
     floconCount++;
-    console.log('floconCount', floconCount);
     if (floconCount % 20 === 0) {
       declencherFeuArtifice();
     }
