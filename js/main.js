@@ -225,6 +225,31 @@
     img.addEventListener('animationend', function () { img.remove(); }, { once: true });
   }
 
+  var isDragging = false;
+  var lastX = 0, lastY = 0;
+
+  document.addEventListener('mousedown', function (e) {
+    if (estInteractif(e.target)) return;
+    isDragging = true;
+    lastX = e.clientX;
+    lastY = e.clientY;
+  });
+
+  document.addEventListener('mouseup',    function () { isDragging = false; });
+  document.addEventListener('mouseleave', function () { isDragging = false; });
+
+  document.addEventListener('mousemove', function (e) {
+    if (!isDragging) return;
+    if (estInteractif(e.target)) return;
+    var dx = e.clientX - lastX;
+    var dy = e.clientY - lastY;
+    if (Math.sqrt(dx * dx + dy * dy) >= 30) {
+      creerFlocon(e.clientX, e.clientY);
+      lastX = e.clientX;
+      lastY = e.clientY;
+    }
+  });
+
   document.addEventListener('click', function (e) {
     if (estInteractif(e.target)) return;
     creerFlocon(e.clientX, e.clientY);
