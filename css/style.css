@@ -1207,6 +1207,28 @@ p {
   animation: chute 3.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
+@keyframes feu-artifice {
+  0%   { opacity: 0; transform: translate(-50%, -50%) scale(0) rotate(-20deg); }
+  15%  { opacity: 1; transform: translate(-50%, -50%) scale(1.15) rotate(10deg); }
+  35%  { transform: translate(-50%, -50%) scale(0.92) rotate(-5deg); }
+  55%  { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(3deg); }
+  75%  { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(-50%, -50%) scale(1.3) rotate(5deg); }
+}
+
+.flocon--feu {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  animation: feu-artifice 2.4s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .flocon { display: none; }
+  .flocon--feu { display: none; }
 }
