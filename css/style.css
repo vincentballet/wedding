@@ -225,12 +225,11 @@ p {
 
 /* Monogramme */
 .nav__logo {
-  font-family: var(--ff-serif);
   font-size: 1.5rem;
-  font-style: italic;
   color: var(--creme);
   transition: color var(--transition);
-  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
 }
 .nav--opaque .nav__logo {
   color: var(--terracotta);
@@ -418,16 +417,16 @@ p {
 }
 
 .hero__date {
-  font-size: 0.85rem;
+  font-size: 1.35rem;
   font-variant: small-caps;
   letter-spacing: 0.28em;
-  color: rgba(255, 255, 255, 0.90);
+  color: rgba(255, 255, 255, 1);
   margin-bottom: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  text-shadow: 0 1px 12px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 16px rgba(0,0,0,0.6);
 }
 
 .hero__date::before,
