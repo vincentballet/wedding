@@ -219,7 +219,7 @@
   var SELECTEUR_INTERACTIF = [
     'a', 'button', 'input', 'select', 'textarea', 'label',
     '[role="button"]', '[role="link"]', '[role="menuitem"]', '[role="tab"]',
-    'summary', 'details', 'iframe', '.nav__lien',
+    'summary', 'details', 'iframe', '.nav__lien', '.souvenir img', '.lightbox',
   ].join(', ');
 
   function estInteractif(element) {
@@ -299,6 +299,63 @@
       fermerMenu();
       burger.focus();
     }
+  });
+
+  /* ──────────────────────────────────────────────────────────
+     9. LIGHTBOX — agrandissement des photos Bonus
+     ────────────────────────────────────────────────────────── */
+  var lightbox       = document.getElementById('lightbox');
+  var lbImg          = lightbox.querySelector('.lightbox__img');
+  var lbFermer       = lightbox.querySelector('.lightbox__fermer');
+  var lbPrev         = lightbox.querySelector('.lightbox__prev');
+  var lbNext         = lightbox.querySelector('.lightbox__next');
+  var souvenirImgs   = Array.from(document.querySelectorAll('.souvenir img'));
+  var lbIndex        = 0;
+
+  function ouvrirLightbox(index) {
+    lbIndex = index;
+    lbImg.src = souvenirImgs[index].src;
+    lbImg.alt = souvenirImgs[index].alt;
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lbFermer.focus();
+  }
+
+  function fermerLightbox() {
+    lightbox.hidden = true;
+    document.body.style.overflow = '';
+    souvenirImgs[lbIndex].focus();
+  }
+
+  function navLightbox(dir) {
+    lbIndex = (lbIndex + dir + souvenirImgs.length) % souvenirImgs.length;
+    lbImg.src = souvenirImgs[lbIndex].src;
+    lbImg.alt = souvenirImgs[lbIndex].alt;
+  }
+
+  souvenirImgs.forEach(function (img, i) {
+    img.setAttribute('tabindex', '0');
+    img.setAttribute('role', 'button');
+    img.setAttribute('aria-label', 'Agrandir la photo');
+    img.addEventListener('click', function () { ouvrirLightbox(i); });
+    img.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); ouvrirLightbox(i); }
+    });
+  });
+
+  lbFermer.addEventListener('click', fermerLightbox);
+  lbPrev.addEventListener('click', function () { navLightbox(-1); });
+  lbNext.addEventListener('click', function () { navLightbox(1); });
+
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) fermerLightbox();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape')     fermerLightbox();
+    if (e.key === 'ArrowLeft')  navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
   });
 
 })();
