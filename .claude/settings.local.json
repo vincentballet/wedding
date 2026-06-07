@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "WebFetch(domain:elasimonwedding.lovable.app)",
-      "WebFetch(domain:forms.gle)"
+      "WebFetch(domain:forms.gle)",
+      "Bash(python3 -m playwright install chromium)"
     ]
   }
 }

@@ -328,6 +328,7 @@ p {
   top: var(--nav-h);
   left: 0;
   right: 0;
+  z-index: 99;
   background: rgba(250, 247, 242, 0.97);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
