@@ -1138,7 +1138,7 @@ p {
   font-family: 'Courier New', Courier, monospace;
   font-size: 0.95rem;
   letter-spacing: 0.06em;
-  white-space: nowrap;
+  word-break: break-all;
 }
 
 .cadeaux__copier {
@@ -1370,4 +1370,72 @@ p {
 @media (prefers-reduced-motion: reduce) {
   .flocon { display: none; }
   .flocon--feu { display: none; }
+}
+
+/* ────────────────────────────────────────────────────────────────
+   18. LIGHTBOX
+   ──────────────────────────────────────────────────────────────── */
+.souvenir img { cursor: zoom-in; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.lightbox[hidden] { display: none; }
+
+.lightbox__img {
+  max-width: min(90vw, 900px);
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--rayon);
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox__fermer,
+.lightbox__prev,
+.lightbox__next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 4px;
+  line-height: 1;
+  transition: background 0.2s;
+}
+
+.lightbox__fermer:hover,
+.lightbox__prev:hover,
+.lightbox__next:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.lightbox__fermer {
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  padding: 0.2rem 0.6rem;
+}
+
+.lightbox__prev,
+.lightbox__next {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 3rem;
+  padding: 0.4rem 0.9rem;
+}
+
+.lightbox__prev { left: 1rem; }
+.lightbox__next { right: 1rem; }
+
+@media (max-width: 600px) {
+  .lightbox__prev { left: 0.25rem; }
+  .lightbox__next { right: 0.25rem; }
 }
