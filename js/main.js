@@ -194,6 +194,25 @@
   }
 
   /* ──────────────────────────────────────────────────────────
+     7. CADEAUX — copier dans le presse-papiers
+     ────────────────────────────────────────────────────────── */
+  document.querySelectorAll('.cadeaux__copier').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var cible = document.getElementById(btn.dataset.cible);
+      if (!cible) return;
+      var texte = cible.textContent.trim().replace(/\s+/g, ' ');
+      navigator.clipboard.writeText(texte).then(function () {
+        btn.classList.add('copie');
+        btn.querySelector('span').textContent = 'Copié !';
+        setTimeout(function () {
+          btn.classList.remove('copie');
+          btn.querySelector('span').textContent = 'Copier';
+        }, 2000);
+      });
+    });
+  });
+
+  /* ──────────────────────────────────────────────────────────
      8. ANIMATION CHUTE — flocon au clic
      ────────────────────────────────────────────────────────── */
 
